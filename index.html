@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="index.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Mercato dei vincitori mondiali</title>
+		<!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"> -->
+		<!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+		<script>
+			window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+			  "palette": {
+			    "popup": {
+			      "background": "#edeff5",
+			      "text": "#838391"
+			    },
+			    "button": {
+			      "background": "#4b81e8"
+			    }
+			  },
+			  "theme": "classic",
+			  "position": "bottom-right",
+			  "content": {
+			    "message": "Questo sito utilizza dei cookie tecnici e di terze parti. Continuando con la navigazione l'utente accetta il loro utilizzo. Per saperne di più o negare il consenso ad alcuni cookie clicca su Cookie Policy.",
+			    "dismiss": "Accetto",
+			    "link": "Cookie Policy",
+			    "href": "https://www.marketingvici.com/files/ViciPrivacyPolicy.htm"
+			  }
+			})});
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895378-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154895378-1');
+
+  tests
+</script>	 -->    
+    <style></style></head>
+	<body class="" style=""><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-floating cc-type-info cc-theme-classic cc-bottom cc-right cc-color-override--1762072787 cc-invisible" style="display: none;"><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">Questo sito utilizza dei cookie tecnici e di terze parti. Continuando con la navigazione l'utente accetta il loro utilizzo. Per saperne di più o negare il consenso ad alcuni cookie clicca su Cookie Policy. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.marketingvici.com/files/ViciPrivacyPolicy.htm" rel="noopener noreferrer nofollow" target="_blank">Cookie Policy</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Accetto</a></div><!--googleon: all--></div>
+		<nav class="bg-azzurro py-2">
+			<div class="container text-center">
+				<h3 class="d-inline-block pulsate-bck font-weight-bold m-0">SUPER OPPORTUNITÀ DI GUADAGNO CON AMAZON! </h3>
+			</div>
+		</nav>
+		<header class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<h3>Allora... quanta voglia di guadagnare hai?</h3>
+						<h1 class="font-weight-bold tx-azzurro mt-3">FALLO CON IL MERCATO HI-TECH!</h1>
+						<ul class="my-3">
+							<li><span class="tx-verde">✓</span> <strong>Grandi margini</strong> di guadagno</li>
+							<li><span class="tx-verde">✓</span> Piattaforma di investimenti ad <strong>accesso GRATUITO</strong></li>
+							<li><span class="tx-verde">✓</span> Prime <strong>5 operazioni PROTETTE</strong></li>
+							<li><span class="tx-verde">✓</span> Basso <strong> investimento iniziale </strong></li>
+
+						</ul>
+						<a href="" class="btn-primary my-4" data-toggle="modal" data-target="#exampleModal"> Accedi alla piattaforma per guadagnare</a>
+					</div>
+					<div class="col-lg-4">
+						<div class="shadow">
+							<div class="bg-verde p-3 text-center">
+								<h5 class="font-weight-bold">Inserisci i tuoi dati di contatto e ricevi subito info gratuite per iniziare</h5>
+							</div>
+							<div class="contactForm">
+							
+								<form>
+								  <label for="namebox">Nome*</label>
+								  <input type="text" id="namebox" name="firstname" placeholder="Il tuo nome.." required>
+							  
+								  <label for="lnbox">Cognome*</label>
+								  <input type="text" id="lnbox" name="lastname" placeholder="Il tuo cognome.." required>
+								  
+								  <label for="telefono">Telefono*</label>
+								  <input type="phonenumber" id="telefono" name="telefono" placeholder="Il tuo telefono.." required>
+									
+								  <input type="checkbox" id="privacy" name="privacy"
+									   checked>
+								<label for="privacy">Ho letto e accetto l'informativa privacy*</label>
+								<br></br>
+								 
+								<div class="wrap">
+								  <button class="button" type="submit" onclick="insertAndClick()" value="  Richiedi info GRATIS  ">Richiedi info GRATIS</button>
+								</div>
+								</form>
+							  </div>
+                                
+								
+							</div>
+							<img class="image-1" src="carte.png" alt="" class="img-fluid m-auto">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="bg-white py-5">
+			<div class="container text-center">
+				<h3 class="font-weight-bold tx-verde mb-4">
+					MERCATO HI-TECH MONDIALE +28,65% <br>
+					BEST PERFORMANCE, BEST GUADAGNO.
+				</h3>
+				<p>
+					L’hi-tech Il settore anticipa il mercato, con trend in costante crescita. Questo significa una sola cosa: <strong>grandi margini di guadagno per gli investitori.</strong><br><br>
+					<strong>Chi guadagna</strong> ha investito con questa <strong>piattaforma certificata ad accesso gratuito</strong> che offre vantaggi esclusivi ai suoi iscritti!
+				</p>
+				<h5 class="font-weight-bold"><u>Le prime 5 operazioni sono protette e i soldi arrivano direttamente sul tuo conto.</u></h5>
+				<a href="" class="btn-primary mt-4" data-toggle="modal" data-target="#exampleModal">Richiedi l’accesso gratuito alla piattaforma ora</a>
+			</div>
+		</section>
+		<section class="bg-dark py-5 text-white">
+			<div class="container text-center">
+				<h4 class="font-weight-bold">Iscriviti gratuitamente con tanti vantaggi:</h4>
+				<div class="row mt-5 justify-content-center">
+					<div class="col-lg-2">
+						<a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+							<img src="formazione.svg" alt="" height="100px">
+							<h6 class="font-weight-bold mt-3">PIATTAFORMA SICURA E AUTORIZZATA</h6>
+						</a>
+					</div>
+					<div class="col-lg-2">
+						<a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+							<img src="protezione.svg" alt="" height="100px">
+							<h6 class="font-weight-bold mt-3">PRIME CINQUE OPERAZIONI PROTETTE</h6>
+						</a>
+					</div>
+					<div class="col-lg-2">
+						<a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+							<img src="assistenza.svg" alt="" height="100px">
+							<h6 class="font-weight-bold mt-3">ASSISTENZA 24H SU 24H</h6>
+						</a>
+					</div>
+					<div class="col-lg-2">
+						<a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+							<img src="budget.svg" alt="" height="100px">
+							<h6 class="font-weight-bold mt-3">PROFITI SUL TUO CONTO IN 24 ORE</h6>
+						</a>
+					</div>
+					<div class="col-lg-2">
+						<a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+							<img src="soldi.svg" alt="" height="100px">
+							<h6 class="font-weight-bold mt-3">BASSO INVESTIMENTO INIZIALE</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white py-5">
+			<div class="container text-center">
+				<h4 class="font-weight-bold">Alimenta la tua voglia di far soldi: investi in hi-tech.</h4>
+				<a href="" class="btn-primary mt-4" data-toggle="modal" data-target="#exampleModal">Richiedi accesso gratuito</a>
+			</div>
+		</section>
+		<footer class="bg-dark text-center py-3 text-white">
+			<div>
+				<h1>Cosa dicono gli utenti attivi</h1>
+<p style="font-weight:bold">
+Da Piero Agosto 25, 2021 <span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span>
+
+<br></br>
+"Sistema collaudato e serio. Lo uso da anni e ho migliorato
+significativamente il mio tenore di vita"
+</p>
+
+<p style="font-weight:bold">
+Da Carla K.  Settembre 17, 2021 <span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span>
+<br></br>
+"Ogni mese riesco a guadagnare cifre non inferiori ai 2.000€ circa. Grazie a
+questo ho appena finito di pagarmi la macchina
+</p>
+
+<p style="font-weight:bold">
+Da Lorenzo 74’ Ottobre 10, 2021 <span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span><span style="color:gold">&#9733;</span>
+<br></br>
+
+"Ho imparato subito e senza problemi. Dopo la prima settimana ho
+guadagnato 1.324€"
+</p>
+
+			</div>
+			<div class="container">
+				<p style="font-size: 12px; line-height: 16px; margin-bottom: 0;">
+					<a href="https://www.marketingvici.com/files/ViciTermsandconditions.pdf" target="_blank" class="tx-verde">Termini e Condizioni</a> - <a href="https://www.marketingvici.com/files/ViciPrivacyPolicy.htm" target="_blank" class="tx-verde">Privacy</a> - <a href="../contatti.html" target="_blank" class="tx-verde">Contatti</a><br><br>
+					Questa pagina web non rappresenta una testata giornalistica, un sito di informazione o un blog. Si tratta di una pagina web finalizzata alle pubblicazioni promozionali che impiegano la tecnica dello storytelling per illustrare la portata dei servizi e dei prodotti proposti. La storia raccontata in questa pagina pertanto costituisce un advertorial o pubblicità con scopo informativo, funzionale a far comprendere il potenziale di quanto proposto.
+				</p>
+			</div>
+		</footer>
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content text-center">
+					<div class="modal-header bg-verde">
+						<h5 class="modal-title w-100" id="exampleModalLabel">Inserisci i tuoi dati di contatto e ricevi subito info gratuite per iniziare</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- <iframe src="https://www.adboost.it/click/1625059455/?tipo=iainvestimercatohitecmondiale&amp;dl_landing=https%3A%2F%2Fwww.pro-investments.com%2Fit%2Finvesti-nel-mercato-hitech-mondiale%2F%3Ft%3Dd%26nome%3D%7Bnome%7D%26cognome%3D%7Bcognome%7D%26email%3D%7Bemail%7D&amp;t=d&amp;nome={nome}&amp;cognome={cognome}&amp;email={email}" frameborder="0" width="100%" scrolling="no" height="400px"></iframe> -->
+						<img src="carte.png" alt="" class="img-fluid m-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Optional JavaScript; choose one of the two! -->
+				<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+		<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+	
+</body></html>
